@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>출력결과</title>
+    </head>
+    <body>
+        <script>
+            function solution(a, b, c){
+             let max = a;
+             let min = 0
+             let answer;
+             if(b >max) {
+                max = b
+                min = a 
+             } else {
+                min = b
+             }
+              if(c > max) {
+                min = min + max
+                max = c
+             } else {
+                min = min + c
+             }
+
+             if (min > max) {
+                answer = "YES"
+             } else {
+                answer = "NO"
+             }
+
+
+                return answer;
+            }
+
+            console.log(solution(13, 33, 17));
+        </script>
+    </body>
+</html>
