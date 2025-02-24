@@ -1,6 +1,9 @@
 function solution(nums) {
-      const uniqueTypes = new Set(nums);
-    const halfNumberOfPokemon = nums.length / 2;
-    const answer = Math.min(uniqueTypes.size, halfNumberOfPokemon);
-    return answer;
+    var answer = 0;
+    
+    const count = Math.floor(nums.length / 2)
+    
+    const array = new Set(nums).size
+    
+    return Math.min(count, array);
 }
