@@ -1,9 +1,12 @@
 function solution(spell, dic) {
-  const target = [...spell].sort().join("");
-
-  for (const word of dic) {
-    const sorted = word.split("").sort().join("");
-    if (sorted === target) return 1;
-  }
-  return 2;
+    var answer = 2;
+    let word = spell.sort().join('');
+    
+    for(let i = 0; i < dic.length; ++i) {
+        if(word === dic[i].split('').sort().join('')) {
+            answer = 1
+        }
+    }
+    
+    return answer;
 }
