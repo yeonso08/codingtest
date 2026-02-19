@@ -1,15 +1,11 @@
 function solution(arr) {
-    var answer = [];
-    
-    arr.map((item, index) => {
-        if(index === 0) {
-            answer.push(item)
-        } else {
-            if(item !== answer[answer.length - 1]) {
-                answer.push(item)
-            }
-        }
-    })
+  var answer = [];
 
-    return answer;
+  for (const number of arr) {
+    if (answer[answer.length - 1] !== number) {
+      answer.push(number);
+    }
+  }
+
+  return answer;
 }
